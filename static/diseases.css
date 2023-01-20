@@ -1,0 +1,61 @@
+.container-fluid{
+    background-color:aqua;
+    height: 60px;
+    margin-top:-10px;
+    padding-bottom: -8px;
+}
+.navbar-brand{
+    font-size: 25px;
+    font-weight: bold;
+}
+.navbar-nav{
+    margin-left: 950px;
+}
+.navbar-nav a{
+    font-size: 20px;
+    font-weight: bold;
+}
+.disease{
+    display: flex;
+    justify-content: center;
+    padding-top:80px;
+}
+
+.card{
+    margin: auto;
+}
+
+#card_1 img{
+    height: 230px;
+}
+
+#card_2 img{
+    height:250px;
+}
+
+#card_3 img{
+    height:250px;
+}
+main{
+    margin-bottom: 100px;
+}
+footer {
+    background:linear-gradient(70deg,rgb(24,24,24),rgb(25,29,29));
+    padding: 36px;
+}
+
+footer ul {
+    display:flex;
+    justify-content:center;
+}
+
+footer li {
+    width: 80px;
+    height: 80px;
+    margin: 0px 50px;
+}
+
+footer img {
+    width:100%;
+    height:100%;
+}

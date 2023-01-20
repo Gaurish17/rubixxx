@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/hospitals.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+    body
+    {
+        background-image: url("{{url_for('static',filename='pinkribbon.jpg')}}");
+    }
+    .container-fluid{
+        background-color:pink;
+    }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{{ url_for('home1')}}">DoctorAI</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="{{ url_for('home1')}}">Home</a>
+                  <a class="nav-link" href="{{ url_for('diseases')}}">Diseases</a>
+                  <a class="nav-link" href="{{ url_for('hospitals')}}">Hospitals</a>
+                  <a class="nav-link" href="{{ url_for('licindex')}}">LIC Policy</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="hospitals">
+            <h2>Hospital Recomendations</h2>
+          </div>
+          <div class="list">
+              <p>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                    Hospitals For Lung Cancer
+                  </button>
+                </p>
+                <div style="min-height: 120px;">
+                  <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                    <div class="card card-body" style="width: 400px;">
+                      <a href="https://www.fmri.in/appointment/?gclid=EAIaIQobChMI5pvUy77V_AIVzpNmAh0hmQOmEAAYASAAEgJ_h_D_BwE"> -> Fortis Hospital Gurgaon.</a>
+                      <a href=""> -> Max Super Speciality Hospital, Saket, New Delhi.</a>
+                      <a href=""> -> Indraprastha Apollo Hospital New Delhi.</a>
+                      <a href=""> -> BLK Super Specialty Hospital New Delhi.</a>
+                      <a href=""> -> Wockhardt Hospitals, Mumbai Central.</a>
+                      <a href=""> -> Global Hospital Chennai</a>
+                      <a href=""> -> MGM Healthcare, Chennai.</a>
+                      <a href=""> -> Artemis Hospital Gurgaon</a>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample1" aria-expanded="false" aria-controls="collapseWidthExample2">
+                    Hospitals For Breast Cancer
+                  </button>
+                </p>
+                <div style="min-height: 120px;">
+                  <div class="collapse collapse-horizontal" id="collapseWidthExample1">
+                    <div class="card card-body" style="width: 400px;">
+                      <a href=""> -> Fortis Hospital Gurgaon.</a>
+                      <a href=""> -> Max Super Speciality Hospital, Saket, New Delhi.</a>
+                      <a href=""> -> Indraprastha Apollo Hospital New Delhi.</a>
+                      <a href=""> -> Narayana Superspeciality Hospital, Gurgaon.</a>
+                      <a href=""> -> Medanta - The Medicity Hospital, Gurgaon.</a>
+                      <a href=""> -> Manipal Hospital Whitefield Formerly Columbia Asia Bangalore.</a>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample2" aria-expanded="false" aria-controls="collapseWidthExample2">
+                    Hospitals For Skin Cancer
+                  </button>
+                </p>
+                <div style="min-height: 120px;">
+                  <div class="collapse collapse-horizontal" id="collapseWidthExample2">
+                    <div class="card card-body" style="width: 400px;">
+                      <a href=""> -> Fortis Hospital Gurgaon.</a>
+                      <a href=""> -> Max Super Speciality Hospital, Saket, New Delhi.</a>
+                      <a href=""> -> Indraprastha Apollo Hospital New Delhi.</a>
+                      <a href=""> -> Nanavati hospital.</a>
+                    </div>
+                  </div>
+                </div>
+          </div>
+    </main>
+    <footer>
+        <ul>
+            <li>
+                <a href=""><img src="data:image/png;base64,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" alt="Instagram"></a>
+            </li>
+            <li>
+                <a href=""><img src="data:image/png;base64,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" alt="Facebook"></a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
